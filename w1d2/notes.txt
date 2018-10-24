@@ -1,0 +1,5 @@
+If there is a problem with the authorization when trying to work with Github, try to use this code in the terminal.
+
+eval 'ssh-agent';
+ssh-add githubkey;
+
