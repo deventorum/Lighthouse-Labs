@@ -1,15 +1,18 @@
-var wrapLog = function (callback, name) {
-  /* your code here */
-  
-  return function(...arg) {
-    let argArray = []
-    Object.entries(arguments).forEach(arg => {
-      argArray.push(arg[1])
-    })
-    console.log(`${name} (${argArray.join(', ')}) => ${callback(...arg)}`)
-  }
+const wrapLog = (callback, name) =>  (...arg) => console.log(`${name} (${arg.join(', ')}) => ${callback(...arg)}`);
  
-};
+
+// var wrapLog = function (callback, name) {
+//   /* your code here */
+  
+//   return function(...arg) {
+//     let argArray = [];
+//     Object.values(arguments).forEach(arg => {
+//       argArray.push(arg);
+//     })
+//     console.log(`${name} (${argArray.join(', ')}) => ${callback(...arg)}`);
+//   }
+ 
+// };
 
 var area = function (x, y) {
   return x * y;
