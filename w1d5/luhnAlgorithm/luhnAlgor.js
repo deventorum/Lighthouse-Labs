@@ -8,10 +8,8 @@ function luhnAlg(num) {
       const currentNum = parseInt(numArray[i])
       if (i % 2 !== 0) {
         currentNum * 2 > 10 ? moduloCheck += currentNum * 2 - 9 : moduloCheck += currentNum * 2;
-        console.log(moduloCheck);
       } else {
         moduloCheck += currentNum;
-        console.log(moduloCheck);
       }
     }
     return moduloCheck % 10 === 0;

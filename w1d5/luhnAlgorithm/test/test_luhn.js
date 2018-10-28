@@ -20,7 +20,33 @@ describe("Luhn Algorithm", function() {
     assert.isFalse(result);
   });
 
+  it("should return false if a number is not a valid credit card number", function() {
+    var num = 79727398713;
+    var result = luhnAlg(num);
+    assert.isFalse(result);
+  });
 
+  it("should return true if a credit card is valid", function() {
+    const card = 378705364959450;
+    const result = luhnAlg(card);
+    assert.isTrue(result);
+  });
+  
+  it("should return true if a card is valid", function() {
+    const card = 4024007103594528;
+    assert.isTrue(luhnAlg(card));
+  });
+  
+  it("should return true if a card is valid", function() {
+    const visa = 344500595291232;
+    assert.isTrue(luhnAlg(visa));
+  });
+  
+  it("should return false if a Visa not valid", function() {
+    const phrase = 5355098240;
+    assert.isFalse(luhnAlg(phrase));
+
+  })
   /* it("should return false if a word is NOT a palindrome", function() {
     var word = "not";
     assert.isFalse(isPalindrome(word));
