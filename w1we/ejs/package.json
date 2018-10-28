@@ -1,0 +1,11 @@
+{
+  "name": "node_ejs_boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate showing the use of ejs as view template engine in a Node.js application",
+  "author": "Denys Tkachuk",
+  "main": "server.js",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}
